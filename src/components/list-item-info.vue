@@ -1,12 +1,12 @@
 <template>
     <ListItem class="list-item-info">
         <EditImage :src="image" class="img"></EditImage>
-        <span contenteditable="true">{{ title }}</span>
+        <span contenteditable="false">{{ title }}</span>
     </ListItem>
 </template>
 <script>
-    import ListItem from '@/components/list-item'
-    import EditImage from '@/components/edit-image'
+    import ListItem from './list-item'
+    import EditImage from './edit-image'
 
     export default {
         name: 'ListItemInfo',
@@ -17,11 +17,11 @@
         props: {
             image: {
                 type: String,
-                default: require('@/assets/social-github.png')
+                default: require('../assets/social-github.png')
             },
             title: {
                 type: String,
-                default: 'github.com/luosijie'
+                default: 'github.com/truexin1292'
             }
         }
     }

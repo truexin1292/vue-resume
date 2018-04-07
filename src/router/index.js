@@ -3,11 +3,25 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-export default new Router({
+import Login from '../components/login/Login'
+import Main from '../components/main/Main'
+
+const router = new Router({
+    mode: 'history',
     routes: [
         {
+            path: '/login',
+            component: Login
+        },
+        {
+            path: '/main',
+            component: Main
+        },
+        {
             path: '/',
-            name: 'Home'
+            redirect: '/login'
         }
     ]
 })
+
+export default router

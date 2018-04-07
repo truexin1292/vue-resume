@@ -2,30 +2,34 @@
     <div class="brief">
         <div class="avatar">
             <EditImage
-                :src="require('@/assets/logo_name.png')"
+                :src="require('../assets/img/head1.png')"
                 width="212" height="212" :isCircle="true" class="img"
             >
             </EditImage>
-            <div class="name" contenteditable="true">Alex Chou</div>
-            <div class="job" contenteditable="true">Front-End</div>
+            <div class="name" contenteditable="false">邹新许</div>
+            <div class="job" contenteditable="false">前端工程师</div>
             <div class="location">
                 <img src="../assets/location.png" alt="">
-                <div class="location-name" contenteditable="true">GunagZhou, China</div>
+                <div class="location-name" contenteditable="false">广东广州</div>
             </div>
         </div>
         <div class="info">
             <ul>
                 <li>
-                    <div class="value" contenteditable="true">Male</div>
-                    <div class="key" contenteditable="true">SEX</div>
+                    <div class="value" contenteditable="false">男</div>
+                    <div class="key" contenteditable="false">性别</div>
                 </li>
                 <li>
-                    <div class="value" contenteditable="true">26</div>
-                    <div class="key" contenteditable="true">AGE</div>
+                    <div class="value" contenteditable="false">26</div>
+                    <div class="key" contenteditable="false">年龄</div>
                 </li>
                 <li>
-                    <div class="value" contenteditable="true">B.A.</div>
-                    <div class="key" contenteditable="true">DEGREE</div>
+                    <div class="value" contenteditable="false">本科</div>
+                    <div class="key" contenteditable="false">学历</div>
+                </li>
+                <li>
+                    <div class="value" contenteditable="false">年限</div>
+                    <div class="key" contenteditable="false">2年</div>
                 </li>
             </ul>
             <!--<img src="../assets/photo.jpeg" alt="photo">-->
@@ -33,7 +37,7 @@
     </div>
 </template>
 <script>
-    import EditImage from '@/components/edit-image'
+    import EditImage from './edit-image'
 
     export default {
         name: 'Brief',

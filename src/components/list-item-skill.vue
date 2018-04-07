@@ -1,16 +1,17 @@
 <template>
     <ListItem class="list-item-skill">
-        <input class="title" type="text" name="percent" v-model="dataTitle">
+        <input class="title" type="text" disabled="true" name="percent" v-model="dataTitle">
         <span class="line">
-      <span class="show" :style="{ width: dataPercent + '%', background: selectColor }"></span>
-    </span>
+            <span class="show" :style="{ width: dataPercent + '%', background: selectColor }"></span>
+        </span>
         <span class="input">
-      <input class="percent" type="text" name="percent" maxlength="2" v-model.number="dataPercent">%
-    </span>
+            <input class="percent" type="text" disabled="true" name="percent" maxlength="2"
+                   v-model.number="dataPercent">%
+        </span>
     </ListItem>
 </template>
 <script>
-    import ListItem from '@/components/list-item'
+    import ListItem from './list-item'
 
     export default {
         name: 'ListItemSkill',

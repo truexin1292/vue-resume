@@ -3,9 +3,9 @@
         <div class="list-heading" :class="{ 'icon-class': icon }">
             <div class="title">
                 <EditImage v-if="icon" :src="icon" height="36" width="36" class="img"></EditImage>
-                <h2 class="title" contenteditable="true">{{title}}</h2>
+                <h2 class="title" contenteditable="false">{{title}}</h2>
             </div>
-            <button class="add" @click="add" :class="{ 'icon-margin-right': icon }">+</button>
+            <!--<button class="add" @click="add" :class="{ 'icon-margin-right': icon }">+</button>-->
         </div>
         <ul id="luo">
             <ListItemAbout v-if="title == 'About me'" v-for="item in arry" :key="item.id"></ListItemAbout>
@@ -19,12 +19,12 @@
     </div>
 </template>
 <script>
-    import EditImage from '@/components/edit-image'
-    import ListItemAbout from '@/components/list-item-about'
-    import ListItemSkill from '@/components/list-item-skill'
-    import ListItemEducation from '@/components/list-item-education'
-    import ListItemExperience from '@/components/list-item-experience'
-    import ListItemInfo from '@/components/list-item-info'
+    import EditImage from './edit-image'
+    import ListItemAbout from './list-item-about'
+    import ListItemSkill from './list-item-skill'
+    import ListItemEducation from './list-item-education'
+    import ListItemExperience from './list-item-experience'
+    import ListItemInfo from './list-item-info'
 
     export default {
         name: 'ContextList',

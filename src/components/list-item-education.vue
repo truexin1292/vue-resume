@@ -1,12 +1,12 @@
 <template>
     <ListItem class="list-item-education">
-        <span class="school" contenteditable="true">{{ school }}</span>
-        <span class="major" contenteditable="true">{{ major }}</span>
-        <span class="date" contenteditable="true">{{ date }}</span>
+        <span class="school" contenteditable="false">{{ school }}</span>
+        <span class="major" contenteditable="false">{{ major }}</span>
+        <span class="date" contenteditable="false">{{ date }}</span>
     </ListItem>
 </template>
 <script>
-    import ListItem from '@/components/list-item'
+    import ListItem from './list-item'
 
     export default {
         name: 'ListItemEducation',
@@ -16,15 +16,15 @@
         props: {
             school: {
                 type: String,
-                default: 'Minjiang University'
+                default: '广州中医药大学'
             },
             major: {
                 type: String,
-                default: 'Design'
+                default: '医药英语'
             },
             date: {
                 type: String,
-                default: '2011.9 - 2015.6'
+                default: '2012.9 - 2016.6'
             }
         }
     }
